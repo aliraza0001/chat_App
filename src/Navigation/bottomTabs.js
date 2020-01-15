@@ -24,8 +24,8 @@ const BottomTabs = createBottomTabNavigator(
         } else if (routeName === 'Chat') {
           iconName = 'message';
         }
-        else{
-            iconName = 'phone';
+        else {
+          iconName = 'phone';
         }
         return <IconComponent name={iconName} size={30} color={tintColor} />;
       },
@@ -33,7 +33,7 @@ const BottomTabs = createBottomTabNavigator(
     tabBarOptions: {
       activeTintColor: '#ff7ab1',
       inactiveTintColor: '#6c467f',
-      showLabel:false,style:{backgroundColor:'#23152e'},tabStyle:{}
+      showLabel: false, style: { backgroundColor: '#23152e' }, tabStyle: {}
     }
   }
 );
