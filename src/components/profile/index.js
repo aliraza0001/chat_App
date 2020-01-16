@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
-const index = () => {
+const index = (props) => {
     return (
 
         <View style={Style.profileContainer}>
@@ -12,8 +12,8 @@ const index = () => {
                     <Image source={require('../../assets/doctor.png')} style={Style.img} />
                 </View>
                 <View style={Style.textContainer} >
-                    <Text style={Style.text}>Test User</Text>
-                    <Text style={Style.text}>Test User</Text>
+                    <Text style={Style.text}>{props.name ? props.name : 'Test User'}</Text>
+                    <Text style={Style.text}>{props.name ? props.name : 'Test User'}</Text>
                 </View>
             </TouchableOpacity>
             <TouchableOpacity style={Style.optionImageContainer}>
@@ -30,7 +30,7 @@ const index = () => {
 export default index
 
 const Style = StyleSheet.create({
-    profileContainer: { height: 60, flexDirection: 'row', backgroundColor: "transparent" },
+    profileContainer: { height: 60, flexDirection: 'row', backgroundColor: "transparent",marginTop:10 },
     imageContainer: { width: '25%', alignItems: "center", justifyContent: "center" },
     img: { width: 50, height: 50, borderRadius: 50 / 2 },
     textContainer: { width: '60%', justifyContent: "center" },
