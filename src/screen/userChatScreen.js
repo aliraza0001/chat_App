@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, TouchableOpacity, ScrollView } from 'react-native'
 import Header from '../components/header/index'
 import ReceivedMsg from '../components/message/receivedMsg'
 import SentMsg from '../components/message/sentMsg'
@@ -10,7 +10,7 @@ import Ionicons from '../components/Icon/Icon'
 export class userChatScreen extends Component {
     static navigationOptions = ({ navigation }) => {
         return {
-            header: (<Header img={navigation.state.params.img}
+            header: () => (<Header img={navigation.state.params.img}
                 name={navigation.state.params.name} navigation={navigation} />)
         }
 
@@ -19,8 +19,10 @@ export class userChatScreen extends Component {
         return (
             <View style={{ flex: 1, backgroundColor: "#f5f5f5" }}>
                 <View style={{ flex: 1 }}>
-                    <SentMsg />
-                    <ReceivedMsg />
+                    <ScrollView showsHorizontalScrollIndicator={false}>
+                        <SentMsg />
+                        <ReceivedMsg />
+                    </ScrollView>
                 </View>
                 <View style={styles.TextInputContainer}>
                     <View>
@@ -29,8 +31,9 @@ export class userChatScreen extends Component {
                             IconStyle={styles.searchIcon}
                             icon='ios-attach' input={styles.input}
                             placeholder="Type Your Message"
-                            IconStyle={{paddingRight:20}}
+                            IconStyle={{ paddingRight: 20 }}
                             Touchable
+                            multiline
                             onPress={() => console.log('Yes I m Working')}
 
                         />

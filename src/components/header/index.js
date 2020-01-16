@@ -15,7 +15,7 @@ const index = (props) => {
                         <Ionicons icon="md-arrow-round-back" size={25} color="#ff7ab1" />
                     </TouchableOpacity>
                     <View style={{ height: 60, width: 50, justifyContent: "center", alignItems: "center" }}>
-                        <Image source={{uri:userImage}} style={{ height: 45, width: 45, borderRadius: 40 / 2 }} />
+                        <Image source={{uri:userImage}} style={{ height: 40, width: 40, borderRadius: 40 / 2 }} />
                     </View>
                     <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between" }}>
                         <View style={{ marginLeft: 16, justifyContent: "center" }}>
