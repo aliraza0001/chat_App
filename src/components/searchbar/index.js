@@ -13,6 +13,7 @@ const index = (props) => {
                     style={styles.input}
                     placeholder="User Nickname"
                     underlineColorAndroid="transparent"
+                    autoCapitalize='sentences'
                 />
             </View>
         </View>
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
     container: {
         width: "100%",
         alignItems: "center",
-        marginTop: 10
+        marginVertical: 10
     },
     searchSection: {
         flexDirection: 'row',
