@@ -47,7 +47,7 @@ export default class UserScreen extends Component {
           </View>
           <FlatList
             data={this.state.data}
-            renderItem={({ item }) => <Card name={item.name.first} img={item.picture.large} navigate={this.props.navigation} />}
+            renderItem={({ item }) => <Card name={item.name.first} img={item.picture.large} navigation={this.props.navigation} />}
             keyExtractor={item => item.phone}
           />
         </SafeAreaView>
