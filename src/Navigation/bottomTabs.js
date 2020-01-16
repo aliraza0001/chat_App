@@ -1,15 +1,17 @@
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Entypo';
-
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-
+// import {createStackNavigator} from 'react-navigation-stack'
 import UserScreen from '../screen/UserScreen';
 import ChatScreen from '../screen/ChatScreen';
 import CallScreen from '../screen/CallScreen';
 
+
+
+
 const BottomTabs = createBottomTabNavigator(
   {
-    User: { screen: UserScreen, },
+    User: { screen: UserScreen },
     Chat: { screen: ChatScreen },
     Calls: { screen: CallScreen },
   },
@@ -33,7 +35,7 @@ const BottomTabs = createBottomTabNavigator(
     tabBarOptions: {
       activeTintColor: '#ff7ab1',
       inactiveTintColor: '#6c467f',
-      showLabel: false, style: { backgroundColor: '#23152e' }, tabStyle: {}
+      showLabel: false, style: { backgroundColor: '#23152e' }
     }
   }
 );
