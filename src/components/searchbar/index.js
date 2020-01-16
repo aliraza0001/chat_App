@@ -1,17 +1,19 @@
 import React from 'react';
-import { View, TextInput, StyleSheet } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons'
+import { View, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
+import Ionicons from '../Icon/Icon'
 
 const index = (props) => {
+    const Icon = <Ionicons style={props.IconStyle ? props.IconStyle : styles.searchIcon} icon={props.icon ? props.icon : "ios-search"} size={20} color="#fff" />
+    const TouchableIcon = props.Touchable ? <TouchableOpacity onPress={props.onPress?props.onPress:null} activeOpacity={0.5}>{Icon}</TouchableOpacity>:Icon
+    
     return (
-        <View style={styles.container}>
-            <View style={styles.searchSection}>
+        <View style={props.container ? props.container : styles.container}>
+            <View style={props.searchSection ? props.searchSection : styles.searchSection}>
 
-                <Ionicons style={styles.searchIcon} name="ios-search" size={20} color="#fff" />
+                {TouchableIcon}
                 <TextInput
                     {...props}
-                    style={styles.input}
-                    placeholder="User Nickname"
+                    style={props.input ? props.input : styles.input}
                     underlineColorAndroid="transparent"
                     autoCapitalize='sentences'
                 />
