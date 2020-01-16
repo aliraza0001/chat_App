@@ -18,10 +18,15 @@ export default class UserScreen extends Component {
   }
 
   RandomUsers = async () => {
-    this.setState({ loading: true })
-    const response = await fetch('https://randomuser.me/api/?results=150')
+    try {
+      this.setState({ loading: true })
+    const response = await fetch('https://randomuser.me/api/?results=100')
     const newdata = await response.json();
     this.setState({ data: newdata.results, arrayholder: newdata.results, loading: false })
+      
+    } catch (error) {
+      console.log(error)
+    }
 
   }
 
@@ -43,7 +48,7 @@ export default class UserScreen extends Component {
         <SafeAreaView style={{ backgroundColor: "#23152e", flex: 1 }}>
           <View style={{ borderBottomWidth: 0.5, borderBottomColor: '#666666', marginBottom: 10 }}>
             <User />
-            <SearchBar value={this.state.value} onChangeText={(val) => this.searchFilterFunction(val)} />
+            <SearchBar value={this.state.value} onChangeText={(val) => this.searchFilterFunction(val)} placeholder="User Nickname" />
           </View>
           <FlatList
             data={this.state.data}
