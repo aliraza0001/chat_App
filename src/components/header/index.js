@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text,Image,TouchableOpacity } from 'react-native'
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import Ionicons from '../Icon/Icon';
 import dummyImage from '../../assets/doctor.png';
 
 const index = (props) => {
@@ -12,7 +12,7 @@ const index = (props) => {
     return (
         <View style={{ width: "100%", height: 60, backgroundColor: "#23152e", flexDirection: "row" }}>
                     <TouchableOpacity activeOpacity={0.6} onPress={()=> goBack()} style={{ margin: 10, justifyContent: "center" }}>
-                        <Ionicons name="md-arrow-round-back" size={25} color="#ff7ab1" />
+                        <Ionicons icon="md-arrow-round-back" size={25} color="#ff7ab1" />
                     </TouchableOpacity>
                     <View style={{ height: 60, width: 50, justifyContent: "center", alignItems: "center" }}>
                         <Image source={{uri:userImage}} style={{ height: 45, width: 45, borderRadius: 40 / 2 }} />
@@ -23,7 +23,7 @@ const index = (props) => {
                             <Text style={{ color: "#f5f5f5", fontSize: 12 }}>online</Text>
                         </View>
                         <View style={{ marginRight: 16, marginTop: 10 }}>
-                            <Ionicons name="md-more" size={25} color="#ff7ab1" />
+                            <Ionicons icon="md-more" size={25} color="#ff7ab1" />
                         </View>
                     </View>
                 </View>
