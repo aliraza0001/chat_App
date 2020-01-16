@@ -1,17 +1,15 @@
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Entypo';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-// import {createStackNavigator} from 'react-navigation-stack'
-import UserScreen from '../screen/UserScreen';
 import ChatScreen from '../screen/ChatScreen';
 import CallScreen from '../screen/CallScreen';
-
+import userStack from './stackNavigation'
 
 
 
 const BottomTabs = createBottomTabNavigator(
   {
-    User: { screen: UserScreen },
+    User: { screen: userStack },
     Chat: { screen: ChatScreen },
     Calls: { screen: CallScreen },
   },

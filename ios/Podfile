@@ -36,6 +36,8 @@ target 'chat_App' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
+  pod 'RNCMaskedView', :path => '../node_modules/@react-native-community/masked-view'
+
   target 'chat_AppTests' do
     inherit! :search_paths
     # Pods for testing
