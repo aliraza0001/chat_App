@@ -19,7 +19,7 @@ export class userChatScreen extends Component {
         return (
             <View style={{ flex: 1, backgroundColor: "#f5f5f5" }}>
                 <View style={{ flex: 1 }}>
-                    <ScrollView showsHorizontalScrollIndicator={false}>
+                    <ScrollView showsHorizontalScrollIndicator={false} style={{flex:1}}>
                         <SentMsg />
                         <ReceivedMsg />
                     </ScrollView>

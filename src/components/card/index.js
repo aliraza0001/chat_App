@@ -14,7 +14,7 @@ export default class index extends PureComponent {
         let userImage = img ? img : dummyImage
         const { navigate } = this.props.navigation
         return (
-            <View style={Style.profileContainer}>
+            <View style={[Style.profileContainer, {  borderBottomWidth: 0.25, borderColor: "#666666"}]}>
                 <TouchableOpacity onPress={() => navigate('UserChat', { name: name, img: img })} activeOpacity={0.7} style={Style.profileContainer}>
                     <View style={Style.imageContainer} >
                         <Image source={{ uri: userImage }} style={Style.img} />
@@ -38,7 +38,7 @@ export default class index extends PureComponent {
 
 
 const Style = StyleSheet.create({
-    profileContainer: { height: 60, flexDirection: 'row', backgroundColor: "transparent", marginVertical: 10 },
+    profileContainer: { height: 75, flexDirection: 'row', backgroundColor: "transparent",alignItems:"center" },
     imageContainer: { width: '25%', alignItems: "center", justifyContent: "center" },
     img: { width: 50, height: 50, borderRadius: 50 / 2 },
     textContainer: { width: '60%', justifyContent: "center" },
