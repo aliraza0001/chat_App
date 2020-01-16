@@ -11,7 +11,8 @@ const index = (props) => {
                 <View style={Style.imageContainer} >
                     <Image source={require('../../assets/doctor.png')} style={Style.img} />
                 </View>
-                <View style={Style.textContainer} >
+                <View style={Style.textContainer}
+                >
                     <Text style={Style.text}>{props.name ? props.name : 'Test User'}</Text>
                     <Text style={Style.text}>{props.name ? props.name : 'Test User'}</Text>
                 </View>
@@ -30,11 +31,39 @@ const index = (props) => {
 export default index
 
 const Style = StyleSheet.create({
-    profileContainer: { height: 60, flexDirection: 'row', backgroundColor: "transparent",marginTop:10 },
-    imageContainer: { width: '25%', alignItems: "center", justifyContent: "center" },
-    img: { width: 50, height: 50, borderRadius: 50 / 2 },
-    textContainer: { width: '60%', justifyContent: "center" },
-    text: { color: '#fff', fontWeight: 'bold' },
-    optionImageContainer: { width: '15%', alignItems: "flex-end", justifyContent: "center" },
-    optionImage: { width: 30, height: 30, borderRadius: 30 / 2, marginRight: 10 }
+    profileContainer: {
+        height: 60,
+        flexDirection: 'row',
+        backgroundColor: "transparent",
+        marginTop: 10
+    },
+    imageContainer: {
+        width: '25%',
+        alignItems: "center",
+        justifyContent: "center"
+    },
+    img: {
+        width: 50,
+        height: 50,
+        borderRadius: 50 / 2
+    },
+    textContainer: {
+        width: '60%',
+        justifyContent: "center"
+    },
+    text: {
+        color: '#fff',
+        fontWeight: 'bold'
+    },
+    optionImageContainer: {
+        width: '15%',
+        alignItems: "flex-end",
+        justifyContent: "center"
+    },
+    optionImage: {
+        width: 30,
+        height: 30,
+        borderRadius: 30 / 2,
+        marginRight: 10
+    }
 })

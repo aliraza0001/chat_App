@@ -23,7 +23,7 @@ const index = (props) => {
                             <Text style={{ color: "#f5f5f5", fontSize: 12 }}>online</Text>
                         </View>
                         <View style={{ marginRight: 16, marginTop: 10 }}>
-                            <Ionicons name="ios-more" size={25} color="#ff7ab1" />
+                            <Ionicons name="md-more" size={25} color="#ff7ab1" />
                         </View>
                     </View>
                 </View>

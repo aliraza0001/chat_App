@@ -5,7 +5,7 @@ export default class ChatScreen extends Component {
     render() {
         return (
             <View>
-                <Text> Chat ChatScreen </Text>
+                <Text> textInComponent </Text>
             </View>
         )
     }
